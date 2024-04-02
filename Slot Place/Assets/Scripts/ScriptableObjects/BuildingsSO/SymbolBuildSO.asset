@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5599d06e7b775ff48b2a7bfa42adef9b, type: 3}
+  m_Name: SymbolBuildSO
+  m_EditorClassIdentifier: 
+  Icon: {fileID: 729067599, guid: a096b0fb71c0ea94e99e9e8035f07199, type: 3}
+  Name: Symbol resident
+  Description: Located in a cell increase the value of the coefficient for its symbol
+    by its participation in a combination on this (and adjacent when pumping) cells
+    on the slots field.
+  Cost: 100
