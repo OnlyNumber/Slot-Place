@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5775734248158836657}
   - component: {fileID: 3505035136813131385}
   - component: {fileID: 2985822127142324369}
+  - component: {fileID: 7376361519487732161}
   m_Layer: 0
   m_Name: ProjectContext
   m_TagString: Untagged
@@ -74,3 +75,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9e29950616278646814756417874736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _skinContainer: {fileID: 7376361519487732161}
+--- !u!114 &7376361519487732161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6960403179131554660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a212af6458afc74687a0d80c020f429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Backgrounds:
+  - {fileID: -1876178736, guid: 8633bf736f6164141bd3d7bfa53ed9ff, type: 3}
+  - {fileID: -398619419, guid: feab29620b0818b4680e59e858704753, type: 3}
+  - {fileID: 27186899, guid: 676d558f199a47545845b67bca6061d6, type: 3}
+  BuildingsInfoFabrics:
+  - {fileID: 11400000, guid: 961a223239824a2479b86fd5c5e21c3d, type: 2}
+  - {fileID: 11400000, guid: 921e396835b4d1a448534deac3515c06, type: 2}
+  - {fileID: 11400000, guid: 41a5a39e0e33ae24cbae174c37aa1dde, type: 2}
+  LineMaterials:
+  - {fileID: 2100000, guid: f1b9da1ecaccb5b448f59d6d167186d2, type: 2}
+  - {fileID: 2100000, guid: 691658aa4a2a2d442860015892af32fb, type: 2}
+  - {fileID: 2100000, guid: 05355fc0e6947994c924bcbb0ee337cb, type: 2}
+  BackgroundMusics:
+  - {fileID: 8300000, guid: e9d46f4fec76e6b4bb5aba89b29fba43, type: 3}
+  - {fileID: 8300000, guid: b4d741bdc2f9b6543b9dcfc9400a7d25, type: 3}
+  - {fileID: 8300000, guid: adf90bf283f6d2343b5570f88c87b5cd, type: 3}

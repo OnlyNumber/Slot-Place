@@ -25,7 +25,7 @@ public class BuildingBank : BuildingSlot
 
     public override bool TryPlaceBuilding()
     {
-        if(CheckBank(X - 1, Y) || CheckBank(X + 1, Y) || CheckBank(X, Y - 1) || CheckBank(X, Y + 1))
+        if(!CheckBank(X - 1, Y) || !CheckBank(X + 1, Y) || !CheckBank(X, Y - 1) || !CheckBank(X, Y + 1))
         {
             return false;
         }
@@ -34,7 +34,14 @@ public class BuildingBank : BuildingSlot
 
     public bool CheckBank(int x, int y)
     {
-        if(x < 0 || x >= StaticFields.MATRIX_SIZE || y < 0 || y >= StaticFields.MATRIX_SIZE || slotMaster.GetTypeCell(x,y) == BuildingType.Bank)
+        Debug.Log("Check bank: " + x + " +" + y);
+
+        if( y < 0 || y >= StaticFields.MATRIX_SIZE)
+        {
+            return true;
+        }
+
+        if(x < 0 || x >= StaticFields.MATRIX_SIZE || slotMaster.GetTypeCell(x,y) == BuildingType.Bank)
         {
             return false;
         }

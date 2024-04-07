@@ -20,14 +20,26 @@ public class BuildingSymbol : BuildingSlot
 
     public override void BuildEffect()
     {
-        if (SymbolIndex == slotMaster.GetItem(X, Y).CurrentIndex)
+        CheckAnotherItems(X, Y,1);
+
+        if(upgradeCoeficient >= NeedUpgradeForImprovement)
         {
-            slotMaster.GetItem(X, Y).CurrentCoeficient *= (increaseCoeficient + (upgradeCoeficient * UpgradeIndex));
+            CheckAnotherItems(X + 1, Y, 2);
 
+            CheckAnotherItems(X - 1, Y, 2);
+
+            CheckAnotherItems(X, Y + 1, 2);
+
+            CheckAnotherItems(X, Y - 1, 2);
         }
+    }
 
-
-
+    public void CheckAnotherItems(int x, int y, int decreaseCoeficient)
+    {
+        if (slotMaster.GetItem(x, y) != null && SymbolIndex == slotMaster.GetItem(x, y).CurrentIndex)
+        {
+            slotMaster.GetItem(x, y).CurrentCoeficient *= ((increaseCoeficient + (upgradeCoeficient * UpgradeIndex)/ decreaseCoeficient));
+        }
     }
 
     public override bool TryPlaceBuilding()

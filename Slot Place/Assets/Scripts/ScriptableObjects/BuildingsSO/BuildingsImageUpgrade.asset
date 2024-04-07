@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76094c72c0410014d97929bfe0d29f36, type: 3}
+  m_Name: BuildingsImageUpgrade
+  m_EditorClassIdentifier: 
+  Empty: {fileID: 11400000, guid: 4903176490c2d5546976c750d675936b, type: 2}
+  Bank: {fileID: 11400000, guid: 5103cdb7ab6509f4b84afc524b40e3d4, type: 2}
+  Storage: {fileID: 11400000, guid: 7a6c11348f2c90b4faa42aa80796d642, type: 2}
+  Residential: {fileID: 11400000, guid: 3eb4bff5d31368042b3880b8af713453, type: 2}
+  Symbol0: {fileID: 11400000, guid: e5696bc35128f1f45af6619575f09ad4, type: 2}
+  Symbol1: {fileID: 11400000, guid: e5696bc35128f1f45af6619575f09ad4, type: 2}
+  Symbol2: {fileID: 11400000, guid: e5696bc35128f1f45af6619575f09ad4, type: 2}
+  Symbol3: {fileID: 11400000, guid: e5696bc35128f1f45af6619575f09ad4, type: 2}
+  Symbol4: {fileID: 11400000, guid: e5696bc35128f1f45af6619575f09ad4, type: 2}
+  Symbol5: {fileID: 11400000, guid: e5696bc35128f1f45af6619575f09ad4, type: 2}
+  Symbol6: {fileID: 11400000, guid: e5696bc35128f1f45af6619575f09ad4, type: 2}
+  Symbol7: {fileID: 11400000, guid: e5696bc35128f1f45af6619575f09ad4, type: 2}
+  Symbol8: {fileID: 11400000, guid: e5696bc35128f1f45af6619575f09ad4, type: 2}
+  Symbol9: {fileID: 11400000, guid: e5696bc35128f1f45af6619575f09ad4, type: 2}
+  Symbol10: {fileID: 11400000, guid: e5696bc35128f1f45af6619575f09ad4, type: 2}
+  SlotSymbol:
+  - {fileID: 383631900, guid: ac8afe5d978e60648bf1e72d854ac3f1, type: 3}
+  - {fileID: 131442070, guid: ac8afe5d978e60648bf1e72d854ac3f1, type: 3}
+  - {fileID: 1274978301, guid: ac8afe5d978e60648bf1e72d854ac3f1, type: 3}
+  - {fileID: -1697156311, guid: ac8afe5d978e60648bf1e72d854ac3f1, type: 3}
+  - {fileID: 1688180704, guid: ac8afe5d978e60648bf1e72d854ac3f1, type: 3}
+  - {fileID: -520230703, guid: ac8afe5d978e60648bf1e72d854ac3f1, type: 3}
+  - {fileID: 367865938, guid: ac8afe5d978e60648bf1e72d854ac3f1, type: 3}
+  - {fileID: -248487964, guid: ac8afe5d978e60648bf1e72d854ac3f1, type: 3}
+  - {fileID: -1192555477, guid: ac8afe5d978e60648bf1e72d854ac3f1, type: 3}
+  - {fileID: -195591248, guid: ac8afe5d978e60648bf1e72d854ac3f1, type: 3}
+  - {fileID: 1967570236, guid: ac8afe5d978e60648bf1e72d854ac3f1, type: 3}

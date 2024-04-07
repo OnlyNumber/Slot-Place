@@ -36,7 +36,7 @@ public class BuildingDateReward : MonoBehaviour, ISlotControl
 
                 _buildingSlots.Add(buildingSlot);
 
-                if(_player.BuildingsInfo[x + y * StaticFields.MATRIX_SIZE].CurrentBuildingType == BuildingType.Storage)
+                if (_player.BuildingsInfo[x + y * StaticFields.MATRIX_SIZE].CurrentBuildingType == BuildingType.Storage)
                 {
                     _rewardLimit += (150 + _player.BuildingsInfo[x + y * StaticFields.MATRIX_SIZE].CurrentUpdate * 10);
                 }
@@ -57,14 +57,16 @@ public class BuildingDateReward : MonoBehaviour, ISlotControl
             player.BuildingsInfo[i].SetTime(DateTime.Now);
         }
 
-        if(sum >= _rewardLimit)
+        if (sum >= _rewardLimit)
         {
             sum = _rewardLimit;
         }
-
-        _rewardDatePanel.SetPanel(true);
-        _rewardText.text = sum.ToString();
-        player.TryChangeCoins(sum);
+        if (sum != 0)
+        {
+            _rewardDatePanel.SetPanel(true);
+            _rewardText.text = sum.ToString();
+            player.TryChangeCoins(sum);
+        }
     }
 
     public double FromTimeToInt(DateTime date)

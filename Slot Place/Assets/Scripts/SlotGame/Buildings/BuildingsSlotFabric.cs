@@ -30,7 +30,6 @@ public static class BuildingsSlotFabric
                 {
                     return new BuildingSymbol();
                 }
-                break;
         }
 
 

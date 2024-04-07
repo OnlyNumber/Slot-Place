@@ -13,6 +13,8 @@ public abstract class BuildingSlot
 
     protected float CoinsPerSecond =0;
 
+    protected float NeedUpgradeForImprovement = 10;
+
     public virtual void Intialize(int x, int y, ISlotControl slotMachine, int upgradeIndex)
     {
         slotMaster = slotMachine;

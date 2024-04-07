@@ -7,15 +7,17 @@ public class PlayerContext : MonoInstaller
 {
     private PlayerData _playerData = null;
 
+    [SerializeField]
+    private ShopSkinContainer _skinContainer;
+
     public override void InstallBindings()
     {
-        //base.InstallBindings();
-
-        Debug.Log("Installbindings");
-
         _playerData = SaveManager.Load<PlayerData>(StaticFields.PLAYER_DATA);
 
         Container.BindInterfacesAndSelfTo<PlayerData>().FromInstance(_playerData).AsSingle();
+
+        Container.BindInterfacesAndSelfTo<ShopSkinContainer>().FromInstance(_skinContainer).AsSingle();
+
 
     }
     private void OnApplicationQuit()

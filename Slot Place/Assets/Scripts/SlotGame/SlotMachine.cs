@@ -30,24 +30,47 @@ public class SlotMachine : MonoBehaviour, ISlotControl
     [SerializeField]
     private RectTransform _panelGrid;
 
-    public BuildingsImageFabric BuildingsImage;
+    public BuildingsInfoFabric BuildingsImage;
 
     private PlayerData _player;
 
+    private ShopSkinContainer _shopSkinContainer;
+
     [SerializeField]
     private float delay;
+
+
+
+    public System.Action<float> OnCoefiecintCreate;
+
+    public System.Action OnStartRoll;
+
+    public delegate bool CheckDelegate();
+
+    public event CheckDelegate OnCheckStartRoll;
 
     private void Start()
     {
         for (int i = 0; i < StaticFields.MATRIX_SIZE * StaticFields.MATRIX_SIZE; i++)
         {
             _slotItems.Add(Instantiate(_prefabItem, _slotsGrid));
+
+            _slotItems[i].SetAndStopIndex(Random.Range(0, _slotItems[i].GetSpritesCount()));
         }
     }
 
-    [Zenject.Inject] public void Intialize(PlayerData data)
+    [Zenject.Inject] public void Intialize(PlayerData data, ShopSkinContainer shopSkinContainer)
     {
         _player = data;
+
+        _shopSkinContainer = shopSkinContainer;
+
+        Debug.Log(_shopSkinContainer.gameObject.name);
+
+        if(_player.BuildingsInfo.Count <= 0)
+        {
+            return;
+        }
 
         for (int x = 0; x < StaticFields.MATRIX_SIZE; x++)
         {
@@ -61,19 +84,29 @@ public class SlotMachine : MonoBehaviour, ISlotControl
             }
         }
 
-        
 
 
     }    
 
     public BuildingType GetTypeCell(int x, int y)
     {
+        if (x < 0 || x > StaticFields.MATRIX_SIZE || y < 0 || y > StaticFields.MATRIX_SIZE)
+        {
+            return BuildingType.Empty;
+        }
         return _player.BuildingsInfo[x + y * StaticFields.MATRIX_SIZE].CurrentBuildingType;
     }
 
     public void StartRoll()
     {
-        if(_slotItems[0].IsRolling)
+
+
+        if(_slotItems[0].IsRolling )
+        {
+            return;
+        }
+
+        if(!OnCheckStartRoll())
         {
             return;
         }
@@ -86,6 +119,8 @@ public class SlotMachine : MonoBehaviour, ISlotControl
         {
             item.IsRolling = true;
         }
+
+        OnStartRoll?.Invoke();
 
         StartCoroutine(DelayResult());
 
@@ -110,7 +145,7 @@ public class SlotMachine : MonoBehaviour, ISlotControl
 
     public List<SlotItem> firstItems = new List<SlotItem>();
 
-    public List<List<SlotItem>> slotItems = new List<List<SlotItem>>(); 
+    public List<List<SlotItem>> slotItemsLines = new List<List<SlotItem>>(); 
 
     public void CheckCombinations()
     {
@@ -118,7 +153,7 @@ public class SlotMachine : MonoBehaviour, ISlotControl
 
         firstItems.Clear();
 
-        slotItems.Clear();
+        slotItemsLines.Clear();
 
         for (int i = 0; i < StaticFields.MATRIX_SIZE; i++)
         {
@@ -155,6 +190,13 @@ public class SlotMachine : MonoBehaviour, ISlotControl
 
             transferLine.Points = new Vector2[25];
 
+            if(_shopSkinContainer == null)
+            {
+                Debug.Log("_shopSkinContainer == null");
+            }
+
+            transferLine.material = _shopSkinContainer.LineMaterials[_player.CurrentSkins[(int)SkinType.line]];
+
             pointIndex = 0;
 
             transferItems = new List<SlotItem>();
@@ -179,18 +221,27 @@ public class SlotMachine : MonoBehaviour, ISlotControl
 
                 if (!IsHaveInColumn && x == 1)
                 {
+                    Debug.Log("destroyed  count:" + transferItems);
+
                     transferItems.Clear();
 
                     Destroy(transferLine.gameObject);
                     break;
                 }
-
+                
+                
                 if (!IsHaveInColumn)
                 {
-                    slotItems.Add(transferItems);
+                    //slotItemsLines.Add(transferItems);
                     break;
                 }
             }
+
+            if(transferItems.Count != 0)
+            {
+                slotItemsLines.Add(transferItems);
+            }
+
 
             if (transferLine != null)
             {
@@ -203,21 +254,31 @@ public class SlotMachine : MonoBehaviour, ISlotControl
         foreach (var item in _uILineRenderers)
         {
             item.Points = CopyArrayWithout00(item.Points);
-            //Debug.Log(item.Points.Length * CoeficientsInfo[])
         }
 
         float coeficient = 0;
 
-        foreach (var CurrentLine in slotItems)
+        float currentCoef = 0;
+
+        Debug.Log(slotItemsLines.Count);
+
+        foreach (var CurrentLine in slotItemsLines)
         {
             foreach (var item in CurrentLine)
             {
                 coeficient += item.CurrentCoeficient;
+                currentCoef += item.CurrentCoeficient;
             }
 
-            Debug.Log("CurrentLine: " + coeficient);
+            Debug.Log("Before coef");
+            Debug.Log("CurrentLine: " + currentCoef);
+            currentCoef = 0;
         }
 
+        Debug.Log("All coef: " + coeficient);
+
+
+        OnCoefiecintCreate?.Invoke(coeficient);
 
     }
 

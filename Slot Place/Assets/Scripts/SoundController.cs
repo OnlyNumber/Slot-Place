@@ -23,11 +23,14 @@ public class SoundController : MonoBehaviour
 
     private PlayerData _playerData;
 
-    [Inject] public void Initialize(PlayerData data)
+    private ShopSkinContainer _shopSkinContainer; 
+
+    [Inject] public void Initialize(PlayerData data, ShopSkinContainer shopSkinContainer)
     {
         _playerData = data;
-        
-        _backgroundMusic.Play();
+
+        _shopSkinContainer = shopSkinContainer;
+
 
         if (Instance == null)
         {
@@ -49,7 +52,25 @@ public class SoundController : MonoBehaviour
         OnClipSoundChange?.Invoke(FromIntToBool(data.VolumeClip));
         OnMusicSoundChange?.Invoke(FromIntToBool(data.VolumeMusic));
 
+        ChangeMusic();
+        
+        _playerData.OnSkinChanged += ChangeMusic;
+
         _backgroundMusic.volume = data.VolumeMusic;
+        
+        _backgroundMusic.Play();
+    }
+
+    public void ChangeMusic()
+    {
+        _backgroundMusic.clip = _shopSkinContainer.BackgroundMusics[_playerData.CurrentSkins[(int)SkinType.music]];
+
+        _backgroundMusic.Play();
+    }
+
+    private void OnDestroy()
+    {
+        _playerData.OnSkinChanged -= ChangeMusic;
     }
 
     public void PlayAudioClip(AudioClip clip)

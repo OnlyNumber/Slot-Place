@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 190}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8362572547488326004
 CanvasRenderer:
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 55c518dee47b9134d864a1cfcdbe03e6, type: 3}
+  m_Sprite: {fileID: 383631900, guid: ac8afe5d978e60648bf1e72d854ac3f1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -90,17 +90,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _slotImage: {fileID: 1049890134945203957}
   sprites:
-  - {fileID: 21300000, guid: 55c518dee47b9134d864a1cfcdbe03e6, type: 3}
-  - {fileID: 21300000, guid: 4045c9aeacdc72f47bb943a27382c597, type: 3}
-  - {fileID: 21300000, guid: 057947381b74a084aa8fa758bb47a51d, type: 3}
-  - {fileID: 21300000, guid: c4d93efad7db8fe49b6b6a67a9f34c0c, type: 3}
-  - {fileID: 21300000, guid: 2357fc0b1c046b840b3fbc53ba7d0dcb, type: 3}
-  - {fileID: 21300000, guid: 6b84f590b1de2394a88eb0b37537adef, type: 3}
-  - {fileID: 21300000, guid: 7319841fe0f527d44ac587ad37672c70, type: 3}
-  - {fileID: 21300000, guid: 0309dcbd05bf5f8489450d3f8977d4e7, type: 3}
-  - {fileID: 21300000, guid: 058704c449ff3b943a1d0543bf7d6688, type: 3}
-  - {fileID: 21300000, guid: 66f12c9e5fd9b5941a261076cdfd0c81, type: 3}
-  - {fileID: 21300000, guid: 97e4e8407152f424e837d29e43dce171, type: 3}
+  - {fileID: 383631900, guid: ac8afe5d978e60648bf1e72d854ac3f1, type: 3}
+  - {fileID: 131442070, guid: ac8afe5d978e60648bf1e72d854ac3f1, type: 3}
+  - {fileID: 1274978301, guid: ac8afe5d978e60648bf1e72d854ac3f1, type: 3}
+  - {fileID: -1697156311, guid: ac8afe5d978e60648bf1e72d854ac3f1, type: 3}
+  - {fileID: 1688180704, guid: ac8afe5d978e60648bf1e72d854ac3f1, type: 3}
+  - {fileID: -520230703, guid: ac8afe5d978e60648bf1e72d854ac3f1, type: 3}
+  - {fileID: 367865938, guid: ac8afe5d978e60648bf1e72d854ac3f1, type: 3}
+  - {fileID: -248487964, guid: ac8afe5d978e60648bf1e72d854ac3f1, type: 3}
+  - {fileID: -1192555477, guid: ac8afe5d978e60648bf1e72d854ac3f1, type: 3}
+  - {fileID: -195591248, guid: ac8afe5d978e60648bf1e72d854ac3f1, type: 3}
+  - {fileID: 1967570236, guid: ac8afe5d978e60648bf1e72d854ac3f1, type: 3}
   _delayBeforeChange: 0.2
+  CurrentCoeficient: 0
   CurrentIndex: 0
   IsRolling: 0

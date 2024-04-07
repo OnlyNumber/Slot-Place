@@ -6,12 +6,31 @@ public class BuildingStorage : BuildingSlot
 {
     public override void BuildEffect()
     {
-        throw new System.NotImplementedException();
     }
 
     public override float GetRewardForTime(float time)
     {
-        CoinsPerSecond = 0.01f + UpgradeIndex * 0.001f;
+        int banksCount = 0;
+
+        if(slotMaster.GetTypeCell(X - 1, Y ) == BuildingType.Bank)
+        {
+            banksCount++;
+        }
+        if (slotMaster.GetTypeCell(X + 1, Y) == BuildingType.Bank)
+        {
+            banksCount++;
+        }
+        if (slotMaster.GetTypeCell(X, Y - 1) == BuildingType.Bank)
+        {
+            banksCount++;
+        }
+        if (slotMaster.GetTypeCell(X, Y + 1) == BuildingType.Bank)
+        {
+            banksCount++;
+        }
+
+
+        CoinsPerSecond = 0.01f + UpgradeIndex * 0.001f + banksCount * 0.001f;
 
         return time * CoinsPerSecond;
     }

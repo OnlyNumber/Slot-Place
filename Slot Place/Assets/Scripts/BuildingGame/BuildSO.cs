@@ -5,7 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "BuildSO")]
 public class BuildSO : ScriptableObject
 {
-
     public Sprite Icon;
 
     public string Name;
@@ -13,4 +12,6 @@ public class BuildSO : ScriptableObject
     public string Description;
 
     public float Cost;
+
+    public float UpgradeCost;
 }

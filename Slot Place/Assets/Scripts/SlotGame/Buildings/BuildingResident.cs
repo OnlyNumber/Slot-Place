@@ -7,21 +7,48 @@ public class BuildingResident : BuildingSlot
     private float increaseCoeficient = 1.1f;
 
     private float upgradeCoeficient = 0.2f;
-
-
+    
     public override void BuildEffect()
     {
-        
-        slotMaster.GetItem(X, Y).CurrentCoeficient *= (increaseCoeficient +(upgradeCoeficient * UpgradeIndex));
+        bool IsStorageClose = false; ;
 
-        Debug.Log(slotMaster.GetItem(X, Y).CurrentCoeficient + " =" + increaseCoeficient + "+ " + (upgradeCoeficient * UpgradeIndex));
+        if (slotMaster.GetTypeCell(X - 1, Y) == BuildingType.Storage || slotMaster.GetTypeCell(X + 1, Y) == BuildingType.Storage || slotMaster.GetTypeCell(X, Y - 1) == BuildingType.Storage || slotMaster.GetTypeCell(X, Y + 1) == BuildingType.Storage)
+        {
+            IsStorageClose = true;
+        }
+
+        float coeficientDecrease = 1;
+
+        if(IsStorageClose)
+        {
+            coeficientDecrease = 1.5f;
+        }
+
+
+
+        slotMaster.GetItem(X, Y).CurrentCoeficient *= (increaseCoeficient +(upgradeCoeficient * UpgradeIndex)/ coeficientDecrease);
+
+        CheckAnotherItems(X - 1, Y, coeficientDecrease);
+        CheckAnotherItems(X + 1, Y, coeficientDecrease);
+        CheckAnotherItems(X, Y - 1, coeficientDecrease);
+        CheckAnotherItems(X, Y + 1, coeficientDecrease);
+
+
+    }
+
+    public void CheckAnotherItems(int x, int y, float decreaseCoeficient)
+    {
+        if (slotMaster.GetItem(x, y) != null)
+        {
+            slotMaster.GetItem(x, y).CurrentCoeficient *= ((increaseCoeficient + (upgradeCoeficient * UpgradeIndex) / decreaseCoeficient));
+        }
     }
 
     public override float GetRewardForTime(float time)
     {
-        if(UpgradeIndex >= 10)
+        if(UpgradeIndex >= NeedUpgradeForImprovement)
         {
-            CoinsPerSecond = 0.03f + UpgradeIndex * 0.01f;
+            CoinsPerSecond = 0.005f + (UpgradeIndex + 1 - NeedUpgradeForImprovement) * 0.0005f;
         }
         else
         {
@@ -34,6 +61,7 @@ public class BuildingResident : BuildingSlot
 
     public override bool TryPlaceBuilding()
     {
-        throw new System.NotImplementedException();
+        return true;
+        //throw new System.NotImplementedException();
     }
 }
