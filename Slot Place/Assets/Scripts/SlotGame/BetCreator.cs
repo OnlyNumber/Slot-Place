@@ -98,9 +98,9 @@ public class BetCreator : MonoBehaviour
 
         _winPanel.SetPanel(true);
 
-        _winCoinText.text = (coeficient * _currentBet).ToString();
+        _winCoinText.text = (coeficient * _currentBet * 2).ToString();
 
-        _playerData.TryChangeCoins(coeficient * _currentBet);
+        _playerData.TryChangeCoins(coeficient * _currentBet * 2);
 
         SoundController.Instance.PlayAudioClip(_winSound);
     }

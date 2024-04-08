@@ -270,6 +270,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a534246e2787a4f8ed25eef212afa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rect: {fileID: 0}
+  canvas: {fileID: 0}
+  duration: 0
+  IsScaling: 0
+  BlockScreen: {fileID: 0}
+  HowToShow: 0
+  HowToHide: 0
+  EaseType: 0
+  IsMainPanel: 0
 --- !u!114 &8737200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -670,6 +679,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a534246e2787a4f8ed25eef212afa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rect: {fileID: 0}
+  canvas: {fileID: 0}
+  duration: 0
+  IsScaling: 0
+  BlockScreen: {fileID: 0}
+  HowToShow: 0
+  HowToHide: 0
+  EaseType: 0
+  IsMainPanel: 0
 --- !u!1 &194350043
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,6 +911,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a534246e2787a4f8ed25eef212afa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rect: {fileID: 0}
+  canvas: {fileID: 0}
+  duration: 0
+  IsScaling: 0
+  BlockScreen: {fileID: 0}
+  HowToShow: 0
+  HowToHide: 0
+  EaseType: 0
+  IsMainPanel: 0
 --- !u!1 &211302335
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,6 +973,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a534246e2787a4f8ed25eef212afa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rect: {fileID: 0}
+  canvas: {fileID: 0}
+  duration: 0
+  IsScaling: 0
+  BlockScreen: {fileID: 0}
+  HowToShow: 0
+  HowToHide: 0
+  EaseType: 0
+  IsMainPanel: 0
 --- !u!114 &211302338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1681,6 +1717,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tutorialPanel: {fileID: 1672231026}
   _mainPanel: {fileID: 164439117}
+  _dailyRewardPanel: {fileID: 0}
+  _tutorialBackground: {fileID: 0}
 --- !u!1 &433399392
 GameObject:
   m_ObjectHideFlags: 0
@@ -2354,6 +2392,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a534246e2787a4f8ed25eef212afa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rect: {fileID: 0}
+  canvas: {fileID: 0}
+  duration: 0
+  IsScaling: 0
+  BlockScreen: {fileID: 0}
+  HowToShow: 0
+  HowToHide: 0
+  EaseType: 0
+  IsMainPanel: 0
 --- !u!114 &616614528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8123,7 +8170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &874660282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8136,6 +8183,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a534246e2787a4f8ed25eef212afa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rect: {fileID: 0}
+  canvas: {fileID: 0}
+  duration: 0
+  IsScaling: 0
+  BlockScreen: {fileID: 0}
+  HowToShow: 0
+  HowToHide: 0
+  EaseType: 0
+  IsMainPanel: 0
 --- !u!224 &874660283
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14231,6 +14287,8 @@ MonoBehaviour:
   _losePanel: {fileID: 8737199}
   _winCoinText: {fileID: 1159057560}
   _winSound: {fileID: 8300000, guid: fba1088912c39ec4a8b3930b6ca6006e, type: 3}
+  winParticleSystems: []
+  cheatMoney: 0
 --- !u!1 &1314120647
 GameObject:
   m_ObjectHideFlags: 0
@@ -24960,6 +25018,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a534246e2787a4f8ed25eef212afa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rect: {fileID: 0}
+  canvas: {fileID: 0}
+  duration: 0
+  IsScaling: 0
+  BlockScreen: {fileID: 0}
+  HowToShow: 0
+  HowToHide: 0
+  EaseType: 0
+  IsMainPanel: 0
 --- !u!114 &1672231027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26026,6 +26093,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a534246e2787a4f8ed25eef212afa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rect: {fileID: 0}
+  canvas: {fileID: 0}
+  duration: 0
+  IsScaling: 0
+  BlockScreen: {fileID: 0}
+  HowToShow: 0
+  HowToHide: 0
+  EaseType: 0
+  IsMainPanel: 0
 --- !u!114 &1808621118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26469,6 +26545,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a534246e2787a4f8ed25eef212afa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rect: {fileID: 0}
+  canvas: {fileID: 0}
+  duration: 0
+  IsScaling: 0
+  BlockScreen: {fileID: 0}
+  HowToShow: 0
+  HowToHide: 0
+  EaseType: 0
+  IsMainPanel: 0
 --- !u!1 &2042537813
 GameObject:
   m_ObjectHideFlags: 0
