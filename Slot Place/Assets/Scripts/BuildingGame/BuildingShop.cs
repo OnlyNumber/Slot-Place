@@ -255,6 +255,8 @@ public class BuildingShop : MonoBehaviour
             SoundController.Instance.PlayAudioClip(_upgradeSound);
 
             _player.BuildingsInfo[CurrentBuildingIndex].CurrentUpdate++;
+            upgradePanel.CostText.text = (_shopSkinContainer.BuildingsInfoFabrics[_player.CurrentSkins[(int)SkinType.buildings]].Get(_player.BuildingsInfo[CurrentBuildingIndex].CurrentBuildingType).UpgradeCost * _player.BuildingsInfo[CurrentBuildingIndex].CurrentUpdate).ToString();
+
         }
         else
         {

@@ -38,7 +38,7 @@ public class ShopDefault : MonoBehaviour
 
         Player = player;
 
-        
+        _contentTransform.rect.size.Set(_contentTransform.rect.width, 50 + (_itemPrefab.GetComponent<RectTransform>().rect.height + 50) * ShopItems.Count);
 
         for (int i = 0; i < skinContainer.GetCount(ShopType); i++)
         {
@@ -64,7 +64,7 @@ public class ShopDefault : MonoBehaviour
 
                 case SkinType.line:
                     {
-                        transfer.ItemImage.material = skinContainer.LineMaterials[i];
+                        transfer.ItemImage.sprite = skinContainer.LineSprites[i];
                         break;
                     }
                 

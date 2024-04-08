@@ -12,6 +12,8 @@ public class ShopSkinContainer : MonoBehaviour
 
     public List<AudioClip> BackgroundMusics;
 
+    public List<Sprite> LineSprites;
+
     public int GetCount(SkinType type)
     {
         switch (type)
@@ -37,5 +39,7 @@ public class ShopSkinContainer : MonoBehaviour
 
         return 0;
     }
+
+    
 
 }
