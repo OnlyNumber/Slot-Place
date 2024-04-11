@@ -10,8 +10,8 @@ public class TutorialChecker : MonoBehaviour
     [SerializeField]
     private PanelControl _mainPanel;
 
-    [SerializeField]
-    private PanelControl _dailyRewardPanel;
+    //[SerializeField]
+    //private PanelControl _dailyRewardPanel;
 
     [SerializeField]
     private GameObject _tutorialBackground;

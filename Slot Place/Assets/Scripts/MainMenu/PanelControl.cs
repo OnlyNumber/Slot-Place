@@ -45,25 +45,8 @@ public class PanelControl : MonoBehaviour
             
         if(!IsMainPanel)
         {
-            //Debug.Log(canvas.gameObject.name);
-
-            //Debug.Log("Height " + canvas.rect.height.ToString());
             rect.anchoredPosition = new Vector2(axis[(int)HowToShow].x * canvas.rect.width, axis[(int)HowToShow].y * canvas.rect.height);
-
         }
-
-        /*if(IsNotAnchoredByAllAxis)
-        {
-            defaultPosition = rect.anchoredPosition;
-        }
-        else
-        {
-            defaultPosition = Vector2.zero;
-
-        }*/
-
-
-        //canvas = FindObjectOfType<Canvas>().GetComponent<RectTransform>();
 
     }
 
