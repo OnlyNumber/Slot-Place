@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5599d06e7b775ff48b2a7bfa42adef9b, type: 3}
   m_Name: EmptyBuildSO
   m_EditorClassIdentifier: 
-  Icon: {fileID: 1178066341, guid: 03f07fe77a359ae40b8d03a3df8cc624, type: 3}
+  Icon: {fileID: 21300000, guid: 4b68ef4eafd7f4149a2d1eb7cc1fef6d, type: 3}
   Name: Empty
   Description: Empty
   Cost: 0
+  UpgradeCost: 0

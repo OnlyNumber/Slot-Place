@@ -78,6 +78,8 @@ public class BuildingShop : MonoBehaviour
 
             buildUIItems[(int)item].CostText.text = _shopSkinContainer.BuildingsInfoFabrics[_player.CurrentSkins[(int)SkinType.buildings]].Get(item).Cost.ToString();
 
+            buildUIItems[(int)item].NameText.text = _shopSkinContainer.BuildingsInfoFabrics[_player.CurrentSkins[(int)SkinType.buildings]].Get(item).Name;
+
             buildUIItems[(int)item].BuyButton.onClick.AddListener(() => ChangeBuilding(index));
             buildUIItems[(int)item].BuyButton.onClick.AddListener(() => _shopPanel.SetPanel(false));
 

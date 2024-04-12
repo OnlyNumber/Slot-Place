@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5599d06e7b775ff48b2a7bfa42adef9b, type: 3}
   m_Name: StorageBuildSO
   m_EditorClassIdentifier: 
-  Icon: {fileID: -1408886791, guid: f1a722ece39ac2c48bd9bde27dff6c3b, type: 3}
+  Icon: {fileID: 21300000, guid: f58973be42ea44642a1556a90d92afbf, type: 3}
   Name: Storage
   Description: 'Generates passive income that is greater than every bank nearby,
     the composition cell is not included in the radius of the symbol cells. '

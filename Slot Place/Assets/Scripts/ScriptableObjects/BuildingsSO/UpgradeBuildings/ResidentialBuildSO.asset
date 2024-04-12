@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5599d06e7b775ff48b2a7bfa42adef9b, type: 3}
   m_Name: ResidentialBuildSO
   m_EditorClassIdentifier: 
-  Icon: {fileID: 1511049363, guid: ec633cd80cf5ad8409bf591812b2b096, type: 3}
+  Icon: {fileID: 21300000, guid: d0c98953ab7af3c44bded01701b18652, type: 3}
   Name: Resident
   Description: 'Improve the coefficient of all symbols on the cell, but have less
     effect when there are adjacent syllables. With improvement, the multiplier grows

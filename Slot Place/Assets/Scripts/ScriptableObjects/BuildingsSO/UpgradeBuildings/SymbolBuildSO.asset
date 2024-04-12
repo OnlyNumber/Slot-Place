@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5599d06e7b775ff48b2a7bfa42adef9b, type: 3}
   m_Name: SymbolBuildSO
   m_EditorClassIdentifier: 
-  Icon: {fileID: 782622970, guid: ec633cd80cf5ad8409bf591812b2b096, type: 3}
+  Icon: {fileID: 21300000, guid: 839e50d9c48a64d4f9be407998985218, type: 3}
   Name: Symbol resident
   Description: Located in a cell increase the value of the coefficient for its symbol
     by its participation in a combination on this (and adjacent when pumping) cells

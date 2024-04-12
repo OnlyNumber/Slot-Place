@@ -20,4 +20,6 @@ public class BuildingUIItemShop : MonoBehaviour
     [SerializeField, FormerlySerializedAs("_buyButton")]
     public Button BuyButton;
 
+    public TMP_Text NameText;
+
 }

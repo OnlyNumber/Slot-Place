@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5599d06e7b775ff48b2a7bfa42adef9b, type: 3}
   m_Name: BankBuildSO
   m_EditorClassIdentifier: 
-  Icon: {fileID: 1900813246, guid: 03f07fe77a359ae40b8d03a3df8cc624, type: 3}
+  Icon: {fileID: 21300000, guid: afe50edf7faf44a4e9e7ed3edfad512e, type: 3}
   Name: Bank
   Description: Include the symbol at its position in a linear combination (right
     and left the same symbol). Banks cannot be placed on an adjacent cell
